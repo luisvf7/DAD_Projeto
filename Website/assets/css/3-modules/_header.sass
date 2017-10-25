@@ -1,0 +1,171 @@
+
+
+#header
+
+  
+  position: relative
+  
+  overflow: hidden
+
+
+  #box-content
+    text-align: center
+    padding: 15%
+
+    background-color: rgba(black, 0.5)
+    .btn-group
+      padding: 60px 0 0 0
+      // .btn
+      //   @include breakpoint($b_small_vp)
+      //     display: block
+      //     margin: 30px 0
+      .cta-large
+        margin-top: 50px
+    h2,h3
+      margin: 0
+      color: white
+      font-weight: 400
+      text-shadow: 0px 1px 7px rgba(0,0,0,0.50)
+
+    h3
+      margin-top: 35px
+
+    // @include breakpoint($b_xs_small_vp)
+    //   text-align: center
+    //   padding: 40px
+    //   .btn-group
+    //     padding: 0
+    //     text-align: center
+    //     padding-top: 40px
+    //     .btn
+    //       width: auto
+    //   h2
+    //     font-size: 36px
+    //   h3
+    //     font-size: 22px
+
+  .menu
+    text-align: center
+    background-color: white
+    position: relative
+    display: inline-block
+    border-bottom: 5px solid $blue
+    width: 100%
+    box-shadow: 0px 1px 12px 0px rgba(0,0,0,0.50)
+    z-index: 10
+    
+
+
+
+    .logo
+      float: left
+      padding: 0 40px
+      display: inline-block
+      color: $blue
+      strong
+        color: #9B9B9B
+    nav.nav
+      position: relative
+      display: inline-block
+      float: right
+
+      ul.navbar
+        margin: 0
+        list-style: none
+        color: $blue
+        li
+          display: inline-block
+          padding: 45px 20px 0 20px
+          margin-right: 20px
+          transition: all 200ms ease-in-out
+
+          &:hover
+            box-shadow: inset 0 3px 0 0 $blue
+
+          a
+            color: $blue
+
+            font-size: 18px
+
+
+      .menu-handle
+        display: none
+        cursor: pointer
+        margin-top: 30px
+        padding-right: 45px
+        span
+          width: 25px
+          display: block
+          margin: 3px 0
+          height: 2px
+          background-color: $gray
+    nav.mobile-nav
+      display: none
+
+      // Dark Version of the Nav
+
+  .dark
+    box-shadow: none
+    border: none
+    background-color: rgba(0, 0, 0, 0.6)
+    .menu-handle
+      span
+        width: 25px
+        display: block
+        margin: 3px 0
+        height: 2px
+        background-color: white !important
+    .logo
+      color: $blue
+      strong
+        color: white
+    nav.nav
+      line-height: 9
+      ul.navbar
+        margin: 0
+        list-style: none
+        color: $blue
+        li
+          padding: 0 20px 0 20px
+          margin: 0 20px
+          background-color: rgba(0,0,0,0.3)
+          box-shadow: inset 0 -3px 0 0 $blue
+          &:hover
+            box-shadow: none
+          a
+            color: $blue
+            line-height: 0
+            font-size: 18px
+
+    .menu-divider
+      display: none
+
+  // @include breakpoint($b_small_vp)
+  //   nav.nav
+  //     margin-top: 25px
+  //     .menu-handle
+  //       display: block !important
+
+  //     .navbar
+  //       display: none
+
+    nav.mobile-nav
+      @include stack()
+
+      ul
+        list-style: none
+        padding: 0
+        li
+          text-align: center
+          &:nth-last-child(1)
+            a
+              border: none
+          a
+            color: $blue
+            display: block
+            background-color: rgba(black, 0.1)
+            font-size: 16px
+            border-bottom: 1px solid rgba(black, 0.12)
+            padding: 10px 0
+      .active
+        display: block !important
